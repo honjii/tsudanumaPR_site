@@ -1,0 +1,1143 @@
+@charset "UTF-8";
+
+/* スマートフォンファースト制作 */
+
+/*初期設定
+----------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=M+PLUS+Rounded+1c&display=swap");
+
+html {
+  /* margin: 0 auto; */
+  font-size: 62.5%;
+  /* ベースフォントサイズ　10px */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 300px;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hanberger {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .mobile {
+    display: none;
+  }
+
+  .main_head {
+    font-size: 6rem;
+    margin-top: 160px;
+    font-weight: bold;
+    font-family: "筑紫A丸ゴシック";
+    color: #0b8900;
+  }
+
+  .main_head_r {
+    font-size: 6rem;
+    text-align: right;
+    margin-top: 160px;
+    margin-right: 120px;
+    font-weight: bold;
+    font-family: "筑紫A丸ゴシック";
+    color: #0b8900;
+  }
+
+  .left_m {
+    transform: rotate(90deg);
+    font-size: 6rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: -306px;
+  }
+
+  .main_p {
+    font-size: 1.6rem;
+    font-family: "ヒラギノ角ゴシック W5";
+    line-height: 2;
+    color: #583403;
+  }
+
+  .right_m {
+    transform: rotate(90deg);
+    font-size: 6rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 310px;
+    margin-left: 520px;
+  }
+
+  .left_m2 {
+    transform: rotate(90deg);
+    font-size: 6rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 260px;
+    margin-left: -322px;
+  }
+
+  /* メインコンテンツ */
+  .wrapper {
+    width: 82%;
+  }
+
+  /* メインエリア */
+  .main_wrapper {
+    margin-left: 123px;
+  }
+
+  .main_b {
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .main_h {
+    font-size: 8rem;
+    font-family: "游教科書体", "YuKyokasho";
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 246px;
+    padding-left: 77px;
+    letter-spacing: 0.58rem;
+    text-shadow: 1px 1px 1px#666666;
+  }
+
+  .main_t {
+    font-size: 4em;
+    font-family: "筑紫A丸ゴシック", "YuKyokasho";
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 88px;
+    padding-left: 89px;
+    letter-spacing: 0.14rem;
+    text-shadow: 1px 1px 1px#666666;
+  }
+
+  /* スクロール */
+
+  /*スクロールダウン全体の場所*/
+  .scrolldown1 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 10%;
+    top: 700px;
+    /*全体の高さ*/
+    height: 50px;
+  }
+
+  /*Scrollテキストの描写*/
+  .scrolldown1 span {
+    /*描画位置*/
+
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -20px;
+    /*テキストの形状*/
+    font-family: "Arial";
+    letter-spacing: 0.12rem;
+    color: #ffff00;
+    text-shadow: 1px 1px 1px #999999;
+    font-size: 2rem;
+  }
+
+  /* 線の描写 */
+  .scrolldown1::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    text-shadow: 1px 1px 1px #999999;
+    background: #ffff00;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  /*高さ・位置・透過が変化して線が上から下に動く*/
+  @keyframes pathmove {
+    0% {
+      height: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    30% {
+      height: 40px;
+      opacity: 1;
+    }
+
+    100% {
+      height: 0;
+      top: 50px;
+      opacity: 0;
+    }
+  }
+
+  /* スクロール終了*/
+  .invited_flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .rosenzu {
+    width: 470px;
+    height: 280px;
+    margin-top: 30px;
+    margin-left: 90px;
+  }
+
+  .btn,
+  a.btn,
+  button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    background-color: #ffff00;
+  }
+
+  a.btn-border {
+    margin-bottom: 12px;
+    padding: 0;
+
+    -webkit-transition: all 0.3s;
+
+    transition: all 0.3s;
+
+    border-radius: 0;
+
+    background-color: #ffff00;
+  }
+
+  a.btn-border span {
+    position: relative;
+
+    display: block;
+
+    padding: 1.25rem 3rem;
+
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background: #fff;
+    background-color: #ffff00;
+  }
+
+  a.btn-border:before {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #ffffaa;
+    display: block;
+
+    width: 100%;
+    height: 14px;
+
+    content: "";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    border: 2px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-image: -webkit-repeating-linear-gradient(
+      135deg,
+      #000,
+      #000 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    background-size: 7px 7px;
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+  }
+
+  a.btn-border:hover {
+    -webkit-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+  }
+
+  a.btn-border span:hover {
+    background-color: #00ff00;
+  }
+
+  a.btn-border:hover:before {
+    bottom: -5px;
+    background-color: #aaffaa;
+  }
+
+  a.btn-border:active {
+    -webkit-transform: translate(0, 7px);
+    transform: translate(0, 7px);
+  }
+
+  a.btn-border:active:before {
+    bottom: -1px;
+  }
+
+  .invite_sobu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+  }
+
+  .sobu {
+    width: 100px;
+    height: 100px;
+    margin-right: 40px;
+  }
+
+  .sobu_t {
+    color: #0b8900;
+  }
+
+  .sobu_a {
+    font-size: 2.4rem;
+    margin-right: 40px;
+    color: #0b8900;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+  .sobu_a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #0b8900;
+    transition: 0.3s;
+    margin-top: -20px;
+  }
+
+  .sobu_a:hover::after {
+    width: 100%;
+  }
+
+  /* shoppingエリア */
+  .shop_detail_wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .shop_detail {
+    width: 256px;
+    margin-right: 40px;
+  }
+
+  .shop_p {
+    font-size: 1.4rem;
+    font-family: "ヒラギノ明朝 W3";
+    color: #583403;
+  }
+
+  .shop_img {
+    width: 100%;
+    height: 192px;
+    margin-top: -10px;
+  }
+
+  /* eatingエリア */
+  .eating {
+    margin-bottom: 310px;
+  }
+
+  .eat_detail {
+    width: 256px;
+    height: 256px;
+    margin-right: 40px;
+  }
+
+  .eat_p {
+    font-size: 1.4rem;
+    font-family: "ヒラギノ角ゴシック W5";
+    color: #583403;
+  }
+
+  .eat_h {
+    font-size: 2rem;
+    font-family: "ヒラギノ角ゴシック W5";
+    margin-top: 40px;
+    color: #583403;
+  }
+
+  .eat_detail_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .eat_img {
+    height: 100%;
+    width: 100%;
+    box-shadow: 1px 1px 1px 1px#dddddd;
+  }
+
+  .ramen_wrapper {
+    margin-top: 190px;
+  }
+
+  .box {
+    position: absolute;
+    height: 100px;
+    width: 192px;
+    margin-left: 64px;
+    margin-top: -4px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 1px 1px #dddddd;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-top: -30px;
+  }
+
+  .tag {
+    margin-top: -40px;
+  }
+
+  .eat_pad {
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-family: "ヒラギノ角ゴシック W5";
+  }
+
+  /* マップ */
+  .map_wrapper {
+    width: 80.5%;
+    background: #00ff00;
+  }
+
+  .map_wrapper iframe {
+    opacity: 0.95;
+    vertical-align: bottom;
+  }
+
+  .main_head_r {
+    margin-bottom: 60px;
+  }
+
+  .main_head_m {
+    font-size: 6rem;
+    text-align: right;
+    margin-top: 160px;
+    margin-right: 120px;
+    font-weight: bold;
+    font-family: "筑紫A丸ゴシック";
+    color: #0b8900;
+    margin-bottom: 80px;
+  }
+
+  .right_m2 {
+    transform: rotate(90deg);
+    font-size: 6rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 610px;
+  }
+
+  /* サイドナビゲーション */
+  .side_nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 18%;
+    text-align: center;
+    background-color: #977546;
+    height: 100%;
+  }
+
+  .side_nav_wrapper {
+    display: inline-block;
+  }
+
+  .logo {
+    width: 145px;
+    height: 130px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .side_navigation ul {
+    margin-left: -40px;
+  }
+
+  .side_navigation ul li {
+    list-style: none;
+    font-family: "筑紫A丸ゴシック";
+    font-weight: bold;
+    font-size: 1.6rem;
+    width: 180px;
+    margin-bottom: 20px;
+    border-radius: 100vh;
+  }
+
+  .side_navigation ul li a {
+    border-radius: 100vh;
+    text-decoration: none;
+    color: #583403;
+    display: block;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 204, 92, 0.856) 20%
+    );
+    background: cover;
+    background-position: 0 0;
+    background-size: 200% auto;
+    transition: 0.4s;
+    background-color: #ffffff;
+  }
+
+  .side_navigation ul li a:hover {
+    background-position: -100% 0;
+  }
+
+  .sns_icon {
+    margin-top: 50px;
+  }
+
+  .sns_icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon2 {
+    margin-top: 40px;
+  }
+
+  .sns_s {
+    margin-right: 40px;
+  }
+
+  /* フッターエリア */
+
+  footer {
+    margin-top: 80px;
+    width: 82%;
+    height: 80px;
+    background-color: #583403;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  small {
+    color: #dddddd;
+  }
+}
+
+/*Media Queries
+----------------------------------------------------*/
+/* スマホ */
+@media screen and (max-width: 499px) {
+  .mobile {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .hanberger {
+    display: block;
+  }
+
+  /*menu*/
+  .menu {
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    z-index: 99;
+    position: fixed;
+  }
+
+  .menu__line {
+    background: #000;
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: transform 0.3s;
+    width: 100%;
+  }
+
+  .menu__line--center {
+    top: 9px;
+  }
+
+  .menu__line--bottom {
+    bottom: 0;
+  }
+
+  .menu__line--top.active {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+
+  .menu__line--center.active {
+    transform: scaleX(0);
+  }
+
+  .menu__line--bottom.active {
+    bottom: 10px;
+    transform: rotate(135deg);
+  }
+
+  /*gnav*/
+  .gnav {
+    background: rgba(3, 141, 49, 0.9);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+  }
+
+  .gnav__wrap {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+  }
+
+  .gnav__menu__item {
+    margin: 40px 0;
+  }
+
+  .gnav__menu__item a {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  .gnav__menu__item a:hover {
+    color: #666;
+  }
+
+  .side_nav {
+    display: none;
+  }
+
+  .wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main_b {
+    background-image: url("../img/main.jpg");
+    background-size: cover;
+    margin: 0;
+    height: 300px;
+  }
+
+  .main_h {
+    font-size: 3rem;
+    font-family: "游教科書体", "YuKyokasho";
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 24%;
+    letter-spacing: 0.58rem;
+    text-shadow: 1px 1px 1px#666666;
+  }
+
+  .main_t {
+    font-size: 2rem;
+    font-family: "筑紫A丸ゴシック", "YuKyokasho";
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 10px;
+    letter-spacing: 0.14rem;
+    text-shadow: 1px 1px 1px#666666;
+  }
+
+  .main_wrapper {
+    margin: 0 30px;
+  }
+
+  /* スクロール */
+
+  /*スクロールダウン全体の場所*/
+  .scrolldown1 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    /*全体の高さ*/
+    left: 50%;
+    height: 50px;
+    margin-top: -45px;
+  }
+
+  /*Scrollテキストの描写*/
+  .scrolldown1 span {
+    /*描画位置*/
+    position: absolute;
+    /*テキストの形状*/
+    font-family: "Arial";
+    letter-spacing: 0.12rem;
+    color: #ffff00;
+    text-shadow: 1px 1px 1px #999999;
+    font-size: 1rem;
+    left: -15px;
+    top: -10px;
+  }
+
+  /* 線の描写 */
+  .scrolldown1::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    text-shadow: 1px 1px 1px #999999;
+    background: #ffff00;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  /*高さ・位置・透過が変化して線が上から下に動く*/
+  @keyframes pathmove {
+    0% {
+      height: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    30% {
+      height: 30px;
+      opacity: 1;
+    }
+
+    100% {
+      height: 0;
+      top: 50px;
+      opacity: 0;
+    }
+  }
+
+  .invite_area {
+    margin-top: 90px;
+  }
+
+  .left_m {
+    transform: rotate(90deg);
+    font-size: 3rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: -140px;
+  }
+
+  .left_m2 {
+    transform: rotate(90deg);
+    font-size: 3rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: -140px;
+  }
+
+  .main_head {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "筑紫A丸ゴシック";
+    color: #0b8900;
+  }
+
+  .main_p {
+    font-size: 1.4rem;
+    font-family: "ヒラギノ角ゴシック W5";
+    line-height: 2;
+    color: #583403;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .rosenzu {
+    width: 100%;
+    height: 280px;
+    margin-top: -10px;
+  }
+
+  .btn,
+  a.btn,
+  button.btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    background-color: #ffff00;
+    margin-top: 20px;
+  }
+
+  a.btn-border {
+    margin-bottom: 12px;
+    padding: 0;
+
+    -webkit-transition: all 0.3s;
+
+    transition: all 0.3s;
+
+    border-radius: 0;
+
+    background-color: #ffff00;
+  }
+
+  a.btn-border span {
+    position: relative;
+
+    display: block;
+
+    padding: 1.25rem 3rem;
+
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background: #fff;
+    background-color: #ffff00;
+  }
+
+  a.btn-border:before {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #ffffaa;
+    display: block;
+
+    width: 100%;
+    height: 14px;
+
+    content: "";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    border: 2px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-image: -webkit-repeating-linear-gradient(
+      135deg,
+      #000,
+      #000 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    background-size: 7px 7px;
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+  }
+
+  a.btn-border:hover {
+    -webkit-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+  }
+
+  a.btn-border span:hover {
+    background-color: #00ff00;
+  }
+
+  a.btn-border:hover:before {
+    bottom: -5px;
+    background-color: #aaffaa;
+  }
+
+  a.btn-border:active {
+    -webkit-transform: translate(0, 7px);
+    transform: translate(0, 7px);
+  }
+
+  a.btn-border:active:before {
+    bottom: -1px;
+  }
+
+  .invite_sobu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sobu {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  .sobu_t {
+    color: #0b8900;
+  }
+
+  .sobu_a {
+    font-size: 1.6rem;
+    color: #0b8900;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+  .sobu_a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #0b8900;
+    transition: 0.3s;
+    margin-top: -20px;
+  }
+
+  .sobu_a:hover::after {
+    width: 100%;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .shop_detail_wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .shopping {
+    margin-top: 90px;
+  }
+
+  .shop_detail {
+    width: 256px;
+    margin-bottom: 30px;
+  }
+
+  .shop_p {
+    font-size: 1.2rem;
+    font-family: "ヒラギノ明朝 W3";
+    color: #583403;
+  }
+
+  .right_m {
+    transform: rotate(90deg);
+    font-size: 3rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 120px;
+    white-space: nowrap;
+  }
+
+  .main_head_r {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "筑紫A丸ゴシック";
+    color: #0b8900;
+  }
+
+  .eating {
+    margin-top: 90px;
+  }
+
+  .eat_h {
+    font-size: 1.6rem;
+    font-family: "ヒラギノ角ゴシック W5";
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #583403;
+  }
+
+  .eat_detail_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .eat_p {
+    font-size: 1.2rem;
+    font-family: "ヒラギノ角ゴシック W5";
+    color: #583403;
+  }
+
+  .eat_detail {
+    width: 256px;
+    height: 256px;
+    margin-bottom: 160px;
+  }
+
+  .box {
+    position: absolute;
+    height: 100px;
+    width: 192px;
+    margin-left: 64px;
+    margin-top: -4px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 1px 1px #dddddd;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-top: -30px;
+  }
+
+  .eat_pad {
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-family: "ヒラギノ角ゴシック W5";
+  }
+
+  .tag {
+    margin-top: -40px;
+  }
+
+  .map_wrapper {
+    width: 100%;
+    background: #00ff00;
+  }
+
+  .map_wrapper iframe {
+    opacity: 0.95;
+    vertical-align: bottom;
+    height: 240px;
+  }
+
+  .main_head_m {
+    font-size: 3rem;
+    margin-top: 60px;
+    font-weight: bold;
+    font-family: "筑紫A丸ゴシック";
+    color: #0b8900;
+    margin-bottom: 30px;
+  }
+
+  .right_m2 {
+    transform: rotate(90deg);
+    font-size: 3rem;
+    color: #0b8900;
+    font-weight: bold;
+    font-family: "Arial";
+    opacity: 0.14;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 160px;
+    white-space: nowrap;
+  }
+
+  footer {
+    margin-top: 40px;
+    width: 100%;
+    height: 80px;
+    background-color: #583403;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  small {
+    color: #dddddd;
+  }
+}
